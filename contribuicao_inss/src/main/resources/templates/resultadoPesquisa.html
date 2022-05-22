@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"> </head>
+
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div class="jumbotron mb-0">
+        <h1 class="display-4">Pesquisar Empregado</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between mb-3">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/projeto/calcular">Calcular</a>
+            <a class="nav-item nav-link" href="cadastrar">Cadastrar</a>
+            <a class="nav-item nav-link" href="listar">Empregados</a>
+            <a class="nav-item nav-link" href="pesquisar">Pesquisar</a>
+        </div>
+    </nav>
+    <form>
+        <fieldset>
+            <div class="card mb-3" th:each = "empregado : ${empregados}">
+                <div class="card-header">Nome <span th:text="${empregado.nome}"></span></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-8 mb-3">
+                            <div>Código <span th:text="${empregado.codEmpregado}"></span></div>
+                            <div>Setor <span th:text="${empregado.setor}"></span></div>
+                            <div>Salario Bruto R$ <span th:text="${empregado.salarioBruto}"></span></div>
+                        </div>
+
+                        <div class="col-12 col-sm-4">
+                            <div>
+                                <img class="img-thumbnail" src="https://cdn.pixabay.com/photo/2021/07/02/04/48/user-6380868_960_720.png" height="150" width="150"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

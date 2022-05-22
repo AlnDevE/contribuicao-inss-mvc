@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div class="jumbotron mb-0">
+        <h1 class="display-4">Cadastro Empregado</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between mb-3">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/projeto/calcular">Calcular</a>
+            <a class="nav-item nav-link" href="">Cadastrar</a>
+            <a class="nav-item nav-link" href="listar">Empregados</a>
+            <a class="nav-item nav-link" href="pesquisar">Pesquisar</a>
+        </div>
+    </nav>
+    <form th:object="${empregadoFormDto}" class="row g-3 card-body row" action="/projeto/empregados/cadastrar" method="post">
+        <div class="form-group col-md-6">
+            <label  class="form-label">Nome</label>
+            <input th:field="*{nome}" th:errorclass="is-invalid"  type="text" class="form-control" placeholder="Seu nome">
+            <div class="invalid-feedback" th:errors="*{nome}">
+                Erros do nome
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label class="form-label">Setor</label>
+            <input th:field="*{setor}" th:errorclass="is-invalid" type="text" class="form-control" placeholder="Seu Setor">
+            <div class="invalid-feedback" th:errors="*{setor}">
+                Erros do email
+            </div>
+        </div>
+        <div class="form-group col-12">
+            <label class="form-label">Salario Bruto</label>
+            <input th:field="*{salarioBruto}" th:errorclass="is-invalid" type="number" class="form-control" placeholder="Sua Salário">
+            <div class="invalid-feedback" th:errors="*{salarioBruto}">
+                Erros da Salario
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
