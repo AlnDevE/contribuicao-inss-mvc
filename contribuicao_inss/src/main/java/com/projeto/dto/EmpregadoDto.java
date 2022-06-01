@@ -9,4 +9,5 @@ public class EmpregadoDto {
     private String nome;
     private String setor;
     private double salarioBruto;
+    private double recInss;
 }
