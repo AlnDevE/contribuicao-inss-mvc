@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.projeto</groupId>
 	<artifactId>contribuicao_inss</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>contribuicao_inss</name>
 	<description>App que calcula contribuicao do Inss</description>
 	<properties>
@@ -65,7 +65,17 @@
 	</dependencies>
 
 	<build>
+		<finalName>InssProject</finalName>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
