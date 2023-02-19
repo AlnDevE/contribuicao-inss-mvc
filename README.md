@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/Windows-017AD7?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"/>
 </div></br>
 
-> Esse projeto foi desenvolvido para fazer o cálculo do recolhimento do INSS de empregados cadastrados no sistema;
+> Esse projeto foi desenvolvido usando linguagem java e spring boot com padrao MVC, que tem como objetivo fazer o cálculo do recolhimento do INSS de empregados cadastrados no sistema;
 
 ## ⚙️ Funcionalidades
 
@@ -25,6 +25,18 @@
   - [x] Visualizar todos os empregados cadastrados no sistema;
   - [x] Pesquisar empregados a partir de seu nome;
   - [x] Calcular o recolhimento do INSS a partir do Id do empregado;
+
+## 💻 Preview
+
+<div style="display: flex; flex-direction:row;">
+    <img src="preview/calc.png" alt="Fatec" width="48%;"/>
+    <img src="preview/register.png" alt="Fatec" width="48%;"/>
+</div>
+
+<div style="display: flex; flex-direction:row;">
+    <img src="preview/search.png" alt="Fatec" width="48%;"/>
+    <img src="preview/employees.png" alt="Fatec" width="48%;"/>
+</div>
 
 ## 💻 Pré-requisitos
 
@@ -42,7 +54,7 @@ Agradecemos a Fatec e ao Mestre Maromo por todo apoio e ensinamentos.
 <sub>
   <div>
     <a href="https://fatecmm.edu.br" target="_blank" rel="noreferrer" rel="noopener">
-      <img src="Fatec.jpg" alt="Fatec" width="300px;"/><br>
+      <img src="Fatec.jpg" alt="Fatec" width="200px;"/><br>
     </a></br>
   </div>
 </sub>
